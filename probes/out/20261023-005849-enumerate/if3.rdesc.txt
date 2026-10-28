@@ -1,0 +1,14 @@
+UsagePage 0x0001 GenericDesktop
+Usage 0x0000 
+Collection Application
+  UsagePage 0xff00 Vendor(FF00)
+  Usage 0x0003 
+  LogicalMin 0
+  LogicalMax 1
+  ReportSize 8
+  ReportCount 90
+  Feature (Const,Array,Abs) bits=90x8
+EndCollection
+
+== report sizes (excluding report-ID byte) ==
+  Feature  reportID=0    720 bits = 90 bytes

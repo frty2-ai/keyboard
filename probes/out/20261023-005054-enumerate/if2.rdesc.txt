@@ -1,0 +1,46 @@
+UsagePage 0x0001 GenericDesktop
+Usage 0x0002 Mouse
+Collection Application
+  Usage 0x0001 Pointer
+  Collection Physical
+    UsagePage 0x0009 Button
+    UsageMin 0x0001 
+    UsageMax 0x0005 
+    LogicalMin 0
+    LogicalMax 1
+    ReportSize 1
+    ReportCount 5
+    Input (Data,Var,Abs) bits=5x1
+    ReportSize 1
+    ReportCount 3
+    Input (Const,Var,Abs) bits=3x1
+    UsagePage 0xff00 Vendor(FF00)
+    ReportSize 8
+    ReportCount 1
+    Input (Const,Var,Abs) bits=1x8
+    UsagePage 0x000c Consumer
+    Usage 0x0238 AC_Pan
+    LogicalMin -127
+    LogicalMax 127
+    ReportSize 8
+    ReportCount 1
+    Input (Data,Var,Rel) bits=1x8
+    UsagePage 0x0001 GenericDesktop
+    Usage 0x0038 Wheel
+    LogicalMin -127
+    LogicalMax 127
+    ReportSize 8
+    ReportCount 1
+    Input (Data,Var,Rel) bits=1x8
+    Usage 0x0030 X
+    Usage 0x0031 Y
+    LogicalMin -32768
+    LogicalMax 32767
+    ReportSize 16
+    ReportCount 2
+    Input (Data,Var,Rel) bits=2x16
+  EndCollection
+EndCollection
+
+== report sizes (excluding report-ID byte) ==
+  Input    reportID=0     64 bits = 8 bytes

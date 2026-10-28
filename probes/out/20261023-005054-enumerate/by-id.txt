@@ -1,0 +1,5 @@
+lrwxrwxrwx 1 root root 10 Oct 23 00:07 usb-Razer_Razer_BlackWidow_V4_Pro-event-if01 -> ../event11
+lrwxrwxrwx 1 root root  9 Oct 23 00:07 usb-Razer_Razer_BlackWidow_V4_Pro-event-kbd -> ../event9
+lrwxrwxrwx 1 root root 10 Oct 23 00:07 usb-Razer_Razer_BlackWidow_V4_Pro-if01-event-kbd -> ../event10
+lrwxrwxrwx 1 root root 10 Oct 23 00:07 usb-Razer_Razer_BlackWidow_V4_Pro-if02-event-mouse -> ../event12
+lrwxrwxrwx 1 root root  9 Oct 23 00:07 usb-Razer_Razer_BlackWidow_V4_Pro-if02-mouse -> ../mouse2

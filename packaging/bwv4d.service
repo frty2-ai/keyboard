@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2026 frty2.ai and contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+[Unit]
+Description=Razer BlackWidow V4 Pro dial and macro daemon
+Documentation=https://github.com/frty2-ai/keyboard
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/bwv4d
+# If the daemon crashes or is killed, put the keyboard back in normal mode so media keys keep working.
+ExecStopPost=%h/.local/bin/bwv4d --restore
+Restart=on-failure
+RestartSec=2
+# Hard ceilings. Idle use is about 10 MB and 0% CPU; clipboard history adds what you copy
+# (capped by clip_mb) plus a brief spike while an image thumbnail is made.
+MemoryMax=128M
+CPUQuota=20%
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=graphical-session.target

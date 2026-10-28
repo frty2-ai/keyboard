@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        cc: [gcc, clang]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends clang pkg-config \
+            libx11-dev libxext-dev libxrandr-dev libxfixes-dev libcairo2-dev
+      - name: Build (warnings are errors)
+        run: make CC=${{ matrix.cc }} CFLAGS="-O2 -Wall -Wextra -Wno-unused-parameter -Wno-format-truncation -Werror"
+      - name: Smoke test
+        run: |
+          ./bwv4d --bogus && exit 1 || [ $? -eq 2 ]
+          ls -l bwv4d
+
+  scripts:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python tools compile
+        run: python3 -m py_compile probes/tools/*.py packaging/merge-vscode-keybindings.py
+      - name: Shell scripts parse
+        run: for f in install.sh uninstall.sh probes/*.sh; do bash -n "$f"; done
+      - name: JSON is valid
+        run: python3 -m json.tool packaging/vscode-keybindings.json > /dev/null
+      - name: SPDX headers present
+        run: |
+          missing=$(grep -L 'SPDX-License-Identifier' src/*.c src/*.h probes/*.sh probes/tools/*.py \
+            install.sh uninstall.sh Makefile packaging/*.rules packaging/*.service packaging/*.py packaging/config.example || true)
+          [ -z "$missing" ] || { echo "missing SPDX header: $missing"; exit 1; }

@@ -1,0 +1,34 @@
+UsagePage 0x0001 GenericDesktop
+Usage 0x0006 Keyboard
+Collection Application
+  UsagePage 0x0007 Keyboard/Keypad
+  UsageMin 0x00e0 
+  UsageMax 0x00e7 
+  LogicalMin 0
+  LogicalMax 1
+  ReportSize 1
+  ReportCount 8
+  Input (Data,Var,Abs) bits=8x1
+  Input (Const,Array,Abs) bits=8x1
+  UsageMin 0x0000 
+  UsageMax 0x00ff 
+  LogicalMin 0
+  LogicalMax 255
+  ReportSize 8
+  ReportCount 6
+  Input (Data,Array,Abs) bits=6x8
+  UsagePage 0x0008 LED
+  UsageMin 0x0001 
+  UsageMax 0x0003 
+  LogicalMin 0
+  LogicalMax 1
+  ReportSize 1
+  ReportCount 3
+  Output (Data,Var,Abs) bits=3x1
+  ReportCount 5
+  Output (Const,Array,Abs) bits=5x1
+EndCollection
+
+== report sizes (excluding report-ID byte) ==
+  Input    reportID=0     64 bits = 8 bytes
+  Output   reportID=0      8 bits = 1 bytes

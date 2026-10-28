@@ -1,0 +1,96 @@
+UsagePage 0x0001 GenericDesktop
+Usage 0x0006 Keyboard
+Collection Application
+  ReportID 1
+  UsagePage 0x0007 Keyboard/Keypad
+  UsageMin 0x00e0 
+  UsageMax 0x00e7 
+  LogicalMin 0
+  LogicalMax 1
+  ReportSize 1
+  ReportCount 8
+  Input (Data,Var,Abs) bits=8x1
+  UsageMin 0x0000 
+  UsageMax 0x00a0 
+  LogicalMin 0
+  LogicalMax 1
+  ReportSize 1
+  ReportCount 160
+  Input (Data,Var,Abs) bits=160x1
+  UsagePage 0x0008 LED
+  UsageMin 0x0001 
+  UsageMax 0x0003 
+  LogicalMin 0
+  LogicalMax 1
+  ReportSize 1
+  ReportCount 3
+  Output (Data,Var,Abs) bits=3x1
+  ReportCount 5
+  Output (Const,Array,Abs) bits=5x1
+EndCollection
+UsagePage 0x000c Consumer
+Usage 0x0001 ConsumerControl
+Collection Application
+  ReportID 2
+  UsageMin 0x0000 
+  UsageMax 0x023c 
+  LogicalMin 0
+  LogicalMax 572
+  ReportCount 1
+  ReportSize 16
+  Input (Data,Array,Abs) bits=1x16
+  ReportSize 8
+  ReportCount 19
+  Input (Const,Array,Abs) bits=19x8
+EndCollection
+UsagePage 0x0001 GenericDesktop
+Usage 0x0080 SystemControl
+Collection Application
+  ReportID 3
+  UsageMin 0x0081 SysPowerDown
+  UsageMax 0x0083 SysWakeUp
+  LogicalMin 0
+  LogicalMax 1
+  ReportSize 1
+  ReportCount 3
+  Input (Data,Var,Abs) bits=3x1
+  ReportCount 5
+  Input (Const,Array,Abs) bits=5x1
+  ReportSize 8
+  ReportCount 20
+  Input (Const,Array,Abs) bits=20x8
+EndCollection
+UsagePage 0x0001 GenericDesktop
+Usage 0x0000 
+Collection Application
+  ReportID 4
+  Usage 0x0003 
+  LogicalMin 0
+  LogicalMax 255
+  PhysicalMin 0
+  PhysicalMax 255
+  ReportSize 8
+  ReportCount 21
+  Input (Data,Array,Abs) bits=21x8
+EndCollection
+UsagePage 0x0001 GenericDesktop
+Usage 0x0000 
+Collection Application
+  ReportID 5
+  Usage 0x0003 
+  LogicalMin 0
+  LogicalMax 255
+  PhysicalMin 0
+  PhysicalMax 255
+  ReportSize 8
+  ReportCount 21
+  Input (Data,Array,Abs) bits=21x8
+EndCollection
+
+== report sizes (excluding report-ID byte) ==
+  Input    reportID=1    168 bits = 21 bytes
+  Input    reportID=2    168 bits = 21 bytes
+  Input    reportID=3    168 bits = 21 bytes
+  Input    reportID=4    168 bits = 21 bytes
+  Input    reportID=5    168 bits = 21 bytes
+  Output   reportID=1      8 bits = 1 bytes

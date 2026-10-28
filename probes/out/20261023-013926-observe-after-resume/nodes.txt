@@ -1,0 +1,9 @@
+IF0 event9
+IF0 hidraw4
+IF1 event10
+IF1 event11
+IF1 hidraw5
+IF2 event12
+IF2 hidraw6
+IF3 hidraw7
+IF4 hidraw8

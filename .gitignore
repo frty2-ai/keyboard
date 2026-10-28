@@ -1,0 +1,14 @@
+# build output
+/bwv4d
+*.o
+
+# Raw probe captures record every key typed during the capture, and the vendor log holds the
+# keyboard's serial number. Keep them local; share the NOTES.md you write from them instead.
+probes/out/**/hid-recorder.txt
+probes/out/**/*.evtest.txt
+probes/out/razerctl.log.jsonl
+
+__pycache__/
+*.pyc
+.vscode/
+.idea/

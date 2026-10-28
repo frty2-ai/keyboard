@@ -1,0 +1,163 @@
+UsagePage 0x0059 
+Usage 0x0001 
+Collection Application
+  ReportID 1
+  Usage 0x0002 
+  Collection Logical
+    Usage 0x0003 
+    LogicalMin 0
+    LogicalMax 65535
+    ReportSize 16
+    ReportCount 1
+    Feature (Const,Var,Abs) bits=1x16
+    Usage 0x0004 
+    Usage 0x0005 
+    Usage 0x0006 
+    Usage 0x0007 
+    Usage 0x0008 
+    LogicalMin 0
+    LogicalMax 2147483647
+    ReportSize 32
+    ReportCount 5
+    Feature (Const,Var,Abs) bits=5x32
+  EndCollection
+  ReportID 2
+  Usage 0x0020 
+  Collection Logical
+    Usage 0x0021 
+    LogicalMin 0
+    LogicalMax 65535
+    ReportSize 16
+    ReportCount 1
+    Feature (Data,Var,Abs) bits=1x16
+  EndCollection
+  ReportID 3
+  Usage 0x0022 
+  Collection Logical
+    Usage 0x0021 
+    LogicalMin 0
+    LogicalMax 65535
+    ReportSize 16
+    ReportCount 1
+    Feature (Data,Var,Abs) bits=1x16
+    Usage 0x0023 
+    Usage 0x0024 
+    Usage 0x0025 
+    Usage 0x0027 
+    Usage 0x0026 
+    LogicalMin 0
+    LogicalMax 2147483647
+    ReportSize 32
+    ReportCount 5
+    Feature (Data,Var,Abs) bits=5x32
+    Usage 0x0028 
+    Usage 0x0029 
+    Usage 0x002a 
+    Usage 0x002b 
+    Usage 0x002c 
+    Usage 0x002d 
+    LogicalMin 0
+    LogicalMax 255
+    ReportSize 8
+    ReportCount 6
+    Feature (Data,Var,Abs) bits=6x8
+  EndCollection
+  ReportID 4
+  Usage 0x0050 
+  Collection Logical
+    Usage 0x0003 
+    Usage 0x0055 
+    LogicalMin 0
+    LogicalMax 8
+    ReportSize 8
+    ReportCount 2
+    Feature (Data,Var,Abs) bits=2x8
+    Usage 0x0021 
+    LogicalMin 0
+    LogicalMax 65535
+    ReportSize 16
+    ReportCount 8
+    Feature (Data,Var,Abs) bits=8x16
+    Usage 0x0051 
+    Usage 0x0052 
+    Usage 0x0053 
+    Usage 0x0054 
+    Usage 0x0051 
+    Usage 0x0052 
+    Usage 0x0053 
+    Usage 0x0054 
+    Usage 0x0051 
+    Usage 0x0052 
+    Usage 0x0053 
+    Usage 0x0054 
+    Usage 0x0051 
+    Usage 0x0052 
+    Usage 0x0053 
+    Usage 0x0054 
+    Usage 0x0051 
+    Usage 0x0052 
+    Usage 0x0053 
+    Usage 0x0054 
+    Usage 0x0051 
+    Usage 0x0052 
+    Usage 0x0053 
+    Usage 0x0054 
+    Usage 0x0051 
+    Usage 0x0052 
+    Usage 0x0053 
+    Usage 0x0054 
+    Usage 0x0051 
+    Usage 0x0052 
+    Usage 0x0053 
+    Usage 0x0054 
+    LogicalMin 0
+    LogicalMax 255
+    ReportSize 8
+    ReportCount 32
+    Feature (Data,Var,Abs) bits=32x8
+  EndCollection
+  ReportID 5
+  Usage 0x0060 
+  Collection Logical
+    Usage 0x0055 
+    LogicalMin 0
+    LogicalMax 8
+    ReportSize 8
+    ReportCount 1
+    Feature (Data,Var,Abs) bits=1x8
+    Usage 0x0061 
+    Usage 0x0062 
+    LogicalMin 0
+    LogicalMax 65535
+    ReportSize 16
+    ReportCount 2
+    Feature (Data,Var,Abs) bits=2x16
+    Usage 0x0051 
+    Usage 0x0052 
+    Usage 0x0053 
+    Usage 0x0054 
+    LogicalMin 0
+    LogicalMax 255
+    ReportSize 8
+    ReportCount 4
+    Feature (Data,Var,Abs) bits=4x8
+  EndCollection
+  ReportID 6
+  Usage 0x0070 
+  Collection Logical
+    Usage 0x0071 
+    LogicalMin 0
+    LogicalMax 1
+    ReportSize 8
+    ReportCount 1
+    Feature (Data,Var,Abs) bits=1x8
+  EndCollection
+EndCollection
+
+== report sizes (excluding report-ID byte) ==
+  Feature  reportID=1    176 bits = 22 bytes
+  Feature  reportID=2     16 bits = 2 bytes
+  Feature  reportID=3    224 bits = 28 bytes
+  Feature  reportID=4    400 bits = 50 bytes
+  Feature  reportID=5     72 bits = 9 bytes
+  Feature  reportID=6      8 bits = 1 bytes

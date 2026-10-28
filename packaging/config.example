@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2026 frty2.ai and contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+# bwv4d config. Saved changes apply on the next restart:  systemctl --user restart bwv4d
+
+# Skills for the dial, in dial order. The exact text is typed into the focused input.
+# Examples: Claude Code slash commands. Replace with your own (up to 32).
+skill = /review
+skill = /init
+skill = /compact
+skill = /clear
+skill = /cost
+skill = /memory
+skill = /model
+skill = /help
+
+# Typed after the skill name ("" for nothing).
+skill_suffix = " "
+# Window classes (substring match) where the skill dial types. Elsewhere it scrolls.
+# Add ghostty if you run Claude Code there.
+skill_apps = claude, code
+
+# Timings in milliseconds.
+osd_ms = 1200            # corner popup
+skill_commit_ms = 2500   # stop turning this long and the skill is final
+alt_hold_ms = 900        # app switcher keeps Alt held this long after the last click
+long_press_ms = 600      # dial press longer than this jumps back to the first profile
+
+dial_invert = false
+roller_invert = false
+
+# ---- Clipboard profile ----
+clip_items = 30          # entries kept (RAM only, never written to disk)
+clip_mb = 32             # total size cap; oldest entries go first
+clip_item_mb = 16        # bigger single copies are not recorded
+clip_commit_ms = 1000    # stop turning this long and the highlighted entry is pasted
+
+# ---- Dial LED (standard HID LampArray, volatile) ----
+# hold  = dial shows the profile colour while the daemon runs (the rest of the board uses led_base)
+# flash = colour only for a moment after each profile change, then your normal lighting
+# off   = never touch lighting
+led_mode = hold
+led_base = #303030       # colour for every other lamp in hold mode, or "keep" to leave them alone
+led_dial_lamp = 0        # lamp id of the dial ring (probes/tools/lamparray.py info)
+
+# Per-profile colour: popup accent and dial LED.
+color_skills = #44d62c
+color_clipboard = #ffb000
+color_vscode = #2f9bff
+color_apps = #ffffff
+color_tabs = #b46bff
+
+# ---- Key overrides (optional) ----
+# run_<key>   = program and arguments (no shell)
+# focus_<key> = if a window title contains this, bring it to the front instead of running
+# keys: m1 m2 m3 m4 m5 side1 side2 side3. An override replaces the key's built-in action.
+# Example: side key 2 raises an open WhatsApp Web window, or opens one in Firefox.
+#run_side2 = firefox https://web.whatsapp.com/
+#focus_side2 = WhatsApp

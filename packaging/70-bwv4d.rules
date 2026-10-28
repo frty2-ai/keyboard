@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 frty2.ai and contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+# bwv4d: give the logged-in local seat (not the "input" group) access to exactly what the daemon needs.
+# Must sort below 73-seat-late.rules, which turns the uaccess tag into an ACL.
+#
+# hidraw interface 1 = special-key codes (also carries typing), 3 = vendor mode switch, 4 = LampArray (dial LED).
+SUBSYSTEM=="hidraw", KERNELS=="0003:1532:028D.*", IMPORT{builtin}="usb_id"
+SUBSYSTEM=="hidraw", KERNELS=="0003:1532:028D.*", ENV{ID_USB_INTERFACE_NUM}=="01|03|04", TAG+="uaccess"
+# evdev node of interface 2 = dial rotation and volume roller (grabbed by the daemon).
+SUBSYSTEM=="input", KERNEL=="event*", ENV{ID_VENDOR_ID}=="1532", ENV{ID_MODEL_ID}=="028d", ENV{ID_USB_INTERFACE_NUM}=="02", TAG+="uaccess"
+# virtual keyboard/wheel output.
+KERNEL=="uinput", SUBSYSTEM=="misc", TAG+="uaccess", OPTIONS+="static_node=uinput"

@@ -1,0 +1,7 @@
+# 2026-10-23T00:50:54+05:30 kernel=7.0.0-38-generic usbdev=1-4.2
+bcdDevice=0101 speed=480 power/control=on autosuspend_delay_ms=2000
+IF0 class=03 sub=01 proto=01 driver=usbhid hid=0003:1532:028D.0005 hiddrv=hid-generic hidraw=hidraw4  events=event9 
+IF1 class=03 sub=00 proto=01 driver=usbhid hid=0003:1532:028D.0006 hiddrv=hid-generic hidraw=hidraw5  events=event10 event11 
+IF2 class=03 sub=01 proto=02 driver=usbhid hid=0003:1532:028D.0007 hiddrv=hid-generic hidraw=hidraw6  events=event12 
+IF3 class=03 sub=00 proto=00 driver=usbhid hid=0003:1532:028D.0008 hiddrv=hid-generic hidraw=hidraw7  events=
+IF4 class=03 sub=00 proto=01 driver=usbhid hid=0003:1532:028D.0009 hiddrv=hid-generic hidraw=hidraw8  events=

@@ -1,0 +1,8 @@
+[
+  { "key": "ctrl+alt+shift+insert", "command": "editor.action.selectAll", "when": "!terminalFocus" },
+  { "key": "ctrl+alt+shift+insert", "command": "workbench.action.terminal.selectAll", "when": "terminalFocus" },
+  { "key": "ctrl+alt+shift+end", "command": "editor.action.clipboardCopyAction", "when": "!terminalFocus" },
+  { "key": "ctrl+alt+shift+end", "command": "workbench.action.terminal.copySelection", "when": "terminalFocus" },
+  { "key": "ctrl+alt+shift+home", "command": "editor.action.clipboardPasteAction", "when": "!terminalFocus" },
+  { "key": "ctrl+alt+shift+home", "command": "workbench.action.terminal.paste", "when": "terminalFocus" }
+]
